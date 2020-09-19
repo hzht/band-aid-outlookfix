@@ -35,7 +35,7 @@ fn main() -> io::Result<()> {
         let mut vec = Vec::new(); 
 
         for line in buffered.lines() {
-            vec.push(line?.replace("SOPA-MAIL16", "SOPA-MAIL01"));
+            vec.push(line?.replace("old-svr", "new-svr")); // old-svr, new-svr
         }
         for line in &vec {
             writeln!(newreg, "{}", line)?;
